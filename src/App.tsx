@@ -53,6 +53,9 @@ function App() {
       option={quiz[submit].option}
       question={quiz[submit].question}
       callBack={handleSubmit}
+      score = {score}
+      quiz = {quiz.length}
+
       />
     </div>
   );

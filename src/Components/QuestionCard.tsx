@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {QuestionpropsType} from '../Types/quiz_type';
 import '../App.css';
 
- const QuestionCard:React.FC<QuestionpropsType> = ({question, option, callBack  }) => {
+ const QuestionCard:React.FC<QuestionpropsType> = ({question, option, callBack,score,quiz  }) => {
         
     let [selectedAns, setSelectedAns] = useState("")
 
@@ -16,6 +16,7 @@ import '../App.css';
     return (
         <div className="question-container">
             <div className="question-div">
+    <p>Your score is <b>{score}</b> out of <b>{quiz}</b></p>
                 <h2>{question}</h2>
             </div>
             <form onSubmit={(e:React.FormEvent<EventTarget>)=>{callBack(e, selectedAns)}} className="question-form">
