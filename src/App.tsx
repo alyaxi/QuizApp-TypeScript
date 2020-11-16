@@ -11,7 +11,7 @@ function App() {
   let [showResult, setShowResult] = useState(false)
   useEffect(() => {
     async function fetchData( ) {
-      const Questions:QuestionType[] = await getQuizData(5, "easy")
+      const Questions:QuestionType[] = await getQuizData(10, "easy")
       console.log(Questions);
       setQuiz(Questions)
       
