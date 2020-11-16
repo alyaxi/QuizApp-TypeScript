@@ -36,7 +36,7 @@ function App() {
     }
   }
   if(!quiz.length)
-  // return <div className="loader"></div>
+  return <div className="loader"></div>
   if(showResult){
     return(
       <div className="question-container">
