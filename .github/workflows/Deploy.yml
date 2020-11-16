@@ -22,9 +22,10 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup Node.js environment
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v1
       with:
         version: 12
+        node-version: 12 
 
     - name: GitHub Action for Yarn
       uses: Borales/actions-yarn@v2.3.0
@@ -38,4 +39,4 @@ jobs:
       run: npm install -g surge
         
     - name: Depolying on Surge
-      run: surge ./build quizapp2020.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge build quizapp2020.surge.sh --token ${{secrets.SURGE_TOKEN}}
