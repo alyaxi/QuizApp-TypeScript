@@ -36,4 +36,4 @@ jobs:
       run: npm install -g surge
         
     - name: Depolying on Surge
-      run: surge ./build http://quizapp2020.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://newquizapp2020.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
