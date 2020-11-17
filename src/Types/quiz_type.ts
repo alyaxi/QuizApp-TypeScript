@@ -21,4 +21,6 @@ export type QuestionpropsType = {
         callBack: (e:React.FormEvent<EventTarget>, answer: string)=>void
         score: number
         quiz: number
+        questionNum: number
+        totalQuestion: number
      }

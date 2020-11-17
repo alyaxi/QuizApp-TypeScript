@@ -3,6 +3,7 @@ import './App.css';
 import {getQuizData} from './services/quiz_services'
 import {QuestionType} from "./Types/quiz_type"
 import QuestionCard from './Components/QuestionCard'
+const Total_Question = 10
 
 function App() {
   let [quiz, setQuiz] = useState<QuestionType[]>([])
@@ -11,7 +12,7 @@ function App() {
   let [showResult, setShowResult] = useState(false)
   useEffect(() => {
     async function fetchData( ) {
-      const Questions:QuestionType[] = await getQuizData(10, "easy")
+      const Questions:QuestionType[] = await getQuizData(Total_Question, "easy")
       console.log(Questions);
       setQuiz(Questions)
       
@@ -55,6 +56,8 @@ function App() {
       callBack={handleSubmit}
       score = {score}
       quiz = {quiz.length}
+      questionNum = {submit + 1}
+      totalQuestion= {Total_Question}
 
       />
     </div>
